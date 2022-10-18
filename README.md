@@ -23,5 +23,6 @@ Our model has 2 components:-
 
 ### Results
 We use Hits@20 metric for measuring model performance.
+
 ![results](/images/results.png)
 
