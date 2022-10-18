@@ -2,7 +2,7 @@
 Term project for graph machine learning (AI60007) course. Group - 04. [Colab Link](https://colab.research.google.com/drive/1xNihZALJrhtnuu1YhWTAgFkRp8o4er87?usp=sharing)
 
 ### Dataset
-Drug-drug interaction (DDI) dataset **ogbl-ddi** is provided by **[Open Graph Benchmark (OGB)](https://ogb.stanford.edu/)**
+Drug-drug interaction (DDI) dataset **ogbl-ddi** provided by **[Open Graph Benchmark (OGB)](https://ogb.stanford.edu/)**
 
 ### Problem Definition
 * *positive edges* - edges which are present in the graph
