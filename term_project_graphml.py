@@ -26,6 +26,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 from ogb.linkproppred import PygLinkPropPredDataset
 dataset = PygLinkPropPredDataset(name='ogbl-ddi')
 
+# getting info on ddi dataset
 ddi_graph = dataset[0]
 ddi_graph.num_nodes
 
@@ -52,6 +53,7 @@ test_edges["edge"].shape[0]
 
 valid_edges["edge_neg"].shape[0]
 
+# for generating embeddings using GNN (using graphSAGE)
 class GraphSAGE(torch.nn.Module):
   def __init__(self,conv,in_channels,hidden_channels,out_channels,num_layers,dropout):
     super(GraphSAGE,self).__init__()
@@ -91,6 +93,7 @@ graphsage_model = GraphSAGE(SAGEConv, graphsage_in_channels,
 link_predictor_in_channels = graphsage_out_channels
 link_predictor_hidden_channels = link_predictor_in_channels
 
+# for link prediction using generated embeddings
 class LinkPredictor(torch.nn.Module):
   def __init__(self,in_channels,hidden_channels,dropout,out_channels=1,
                concat=lambda x,y:x*y):
@@ -183,6 +186,8 @@ def test(graphsage_model, link_predictor, initial_node_embeddings, edge_index, p
   test_hits = evaluator.eval({'y_pred_pos':pos_test_pred,'y_pred_neg':neg_test_pred})
   return valid_hits, test_hits
 
+
+# visualize and plot results
 import matplotlib.pyplot as plt
 from tqdm import trange
 epochs_bar = trange(1, epochs+1,desc='Loss n/a')
