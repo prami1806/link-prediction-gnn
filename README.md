@@ -5,11 +5,9 @@ Term project for graph machine learning (AI60007) course. Group - 04. [Colab Lin
 Drug-drug interaction (DDI) dataset **ogbl-ddi** is provided by **[Open Graph Benchmark (OGB)](https://ogb.stanford.edu/)**
 
 ### Problem Definition
-*positive edges* - edges which are present in the graph
-
-*negative edges* - edges which are not present in the graph
-
-*missing edges* - edges which may have a significant joint interaction, but the knowledge of whether it is positive or negative is not present in the graph.
+* *positive edges* - edges which are present in the graph
+* *negative edges* - edges which are not present in the graph
+* *missing edges* - edges which may have a significant joint interaction, but the knowledge of whether it is positive or negative is not present in the graph.
 
 Goal is to develop a graph machine learning model to solve the link prediction task: given two drugs as input, we want to predict if the two drugs interact with each other, i.e., if an edge should exist between these two nodes in the graph. This should allow us to complete our dataset by understanding missing edges as either positive or negative edges. Additionally, improve the robustness of the model making it more generalizable to new drugs.
 
