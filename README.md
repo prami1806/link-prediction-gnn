@@ -20,3 +20,8 @@ Our model has 2 components:-
 ![GNN architecture](/images/gnn.JPG)
 2. Deep Neural Network to output probability for link prediction.
 ![Link predictor](/images/linkpred.JPG)
+
+### Results
+We use Hits@20 metric for measuring model performance.
+![results](/images/results.png)
+
