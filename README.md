@@ -17,9 +17,7 @@ We do an edge split which is a "protein-target split": the edges are split such 
 ### Model
 Our model has 2 components:-
 1. Graph Neural Network (GNN) to generate node embeddings (using GraphSAGE)
-![GNN architecture](/images/gnn.JPG)
 2. Deep Neural Network to output probability for link prediction.
-![Link predictor](/images/linkpred.JPG)
 
 ### Results
 We use Hits@20 metric for measuring model performance.
